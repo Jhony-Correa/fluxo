@@ -43,7 +43,7 @@ Copie .env.example
 Renomeie para .env
 Preencha com suas credenciais
 
-5.Execute:
+5. Execute:
 
 python app.py
 
