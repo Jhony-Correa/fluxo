@@ -19,17 +19,45 @@ Sistema web para controle de finanças pessoais, permitindo cadastro de usuário
 - Listagem e edição de registros
 - Banco de dados relacional com chave estrangeira
 
+## Preview
+
+### Tela de Login
+<p align="center">
+  <img src="images/login.png" width="600">
+</p>
+
+### Tela de Cadastro
+<p align="center">
+  <img src="images/cadastro.png" width="600">
+</p>
+
+### Dashboard
+<p align="center">
+  <img src="images/dashboard.png" width="600">
+</p>
+
+### Nova Transação
+<p align="center">
+  <img src="images/nova-transacao.png" width="600">
+</p>
+
+### Histórico e Filtros
+<p align="center">
+  <img src="images/historico_filtros.png" width="600">
+</p>
+
+
 ## Como rodar o projeto
 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/Jhony-Correa/fluxo.git
+git clone https://github.com/Jhony-Correa/Fluxo.git
 ```
 
 2. Entre na pasta:
 
-cd fluxo
+cd Fluxo
 
 
 3. Instale as dependências:
