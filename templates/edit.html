@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fluxo | Editar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <nav class="barra-nav">
+        <div class="barra-nav-conteudo">
+            <h2>Fluxo</h2>
+            <div class="links-nav">
+                <span>Olá, <strong>{{ session.nome_usr }}</strong></span>
+                <a href="{{ url_for('sair') }}">Sair</a>
+            </div>
+        </div>
+    </nav>
+    <div class="cartao" style="max-width: 500px; margin: auto; text-align: left;">
+        <h2>Editar</h2>
+        <form method="POST">
+            <div class="grupo-form"><label>Tipo</label>
+                <select name="tipo">
+                    <option value="entrada" {% if t.tipo =='entrada' %}selected{% endif %}>Entrada</option>
+                    <option value="despesa" {% if t.tipo =='despesa' %}selected{% endif %}>Despesa</option>
+                </select>
+            </div>
+            <div class="grupo-form"><label>Valor</label><input type="number" step="0.01" name="valor" value="{{ t.valor }}"></div>
+            <div class="grupo-form"><label>Categoria</label><input type="text" name="categoria" value="{{ t.categoria }}"></div>
+            <div class="grupo-form"><label>Data</label><input type="date" name="data" value="{{ t.data }}"></div>
+            <div class="grupo-form"><label>Descrição</label><input type="text" name="descricao" value="{{ t.descricao }}"></div>
+            <button type="submit" class="btn btn-pri">Atualizar</button>
+            <a href="{{ url_for('ini') }}" class="btn btn-sec">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fluxo | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div id="avisos-container">
+        {% with msgs = get_flashed_messages(with_categories=true) %}
+            {% if msgs %}
+                {% for cat, msg in msgs %}
+                    <div class="alerta alerta-{{ cat }}">{{ msg }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div class="autentica-container">
+        <div class="autentica-cartao">
+            <h2>Entrar</h2>
+            <form method="POST">
+                <div class="grupo-form"><label>Usuário</label><input type="text" name="usuario" required></div>
+                <div class="grupo-form"><label>Senha</label><input type="password" name="senha" required></div>
+                <button type="submit" class="btn btn-pri">Entrar</button>
+            </form>
+            <p style="margin-top: 20px;">Novo? <a href="{{ url_for('cad') }}" style="color: #3498db;">Cadastre-se</a></p>
+        </div>
+    </div>
+</body>
+</html>
